@@ -32,7 +32,7 @@ const services = [
     name: '언론홍보 / PR',
     icon: Newspaper,
     title: '가장 신뢰도 높은 언론홍보',
-    description: '소비자가 가장 신뢰하는 정보인 '뉴스'를 통해, 100개 이상의 언론사 네트워크로 [cite: 720] 기업과 브랜드의 공신력을 강화합니다. [cite: 688, 691-693, 714]',
+    description: `소비자가 가장 신뢰하는 정보인 '뉴스'를 통해, 100개 이상의 언론사 네트워크로 기업과 브랜드의 공신력을 강화합니다.`,
     features: [
       '기획 기사(Feature Story) 작성 및 배포 [cite: 719-725]',
       '애드버토리얼(Advertorial) / 보도자료 배포 [cite: 719-725]',
