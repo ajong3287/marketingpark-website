@@ -1,38 +1,17 @@
-// app/_components/home/trust-bar.tsx
-// [엘리나이]
-import Image from 'next/image';
-
-const clientLogos = [
-  { src: '/images/clients/samsung.png', alt: 'Samsung Logo' },
-  { src: '/images/clients/cj.png', alt: 'CJ Logo' },
-  { src: '/images/clients/kia.png', alt: 'KIA Logo' },
-  { src: '/images/clients/nongshim.png', alt: 'Nongshim Logo' },
-  { src: '/images/clients/miraeasset.png', alt: 'Mirae Asset Logo' },
-  { src: '/images/clients/kb.png', alt: 'KB Kookmin Bank Logo' },
-];
-
-export default function TrustBar() {
+export const TrustBar = () => { // Changed to named export
+  const clients = ['SAMSUNG', 'CJ', 'KIA MOTORS', '농심', '미래에셋증권', 'KB국민은행']; // TODO: 실제 로고 이미지로 교체
   return (
-    <section className="py-12 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-xl font-semibold text-gray-600 mb-8">
-          마케팅파크를 신뢰하는 파트너사
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 items-center justify-center">
-          {clientLogos.map((logo, index) => (
-            <div key={index} className="flex justify-center items-center">
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                width={120} // Adjust width as needed
-                height={60} // Adjust height as needed
-                objectFit="contain"
-                className="grayscale hover:grayscale-0 transition-all duration-300"
-              />
+    <section className="bg-white py-12 sm:py-16">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h3 className="text-center text-base font-semibold text-gray-600">(주)마케팅파크와 함께하는 주요 고객사</h3>
+        <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
+          {clients.map((client) => (
+            <div key={client} className="flex items-center justify-center">
+              <span className="text-lg font-semibold text-gray-400">{client}</span>
             </div>
           ))}
         </div>
       </div>
     </section>
   );
-}
+};

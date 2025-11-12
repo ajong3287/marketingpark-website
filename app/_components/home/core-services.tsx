@@ -1,54 +1,29 @@
-// app/_components/home/core-services.tsx
-// [엘리나이]
 import Link from 'next/link';
-
-export default function CoreServices() {
-  return (
-    <section className="py-16 bg-white">
-      <div className="max-w-6xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-12">
-          마케팅파크의 핵심 서비스
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Service 1: 바이럴 마케팅 */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-blue-600 mb-4">바이럴 마케팅</h3>
-            <p className="text-gray-700 mb-4">
-              온라인 입소문을 통해 브랜드 인지도를 높이고, 잠재 고객의 구매를 유도합니다.
-            </p>
-            <Link href="/services" className="text-blue-600 hover:underline font-medium">
-              자세히 보기 &rarr;
-            </Link>
-          </div>
-
-          {/* Service 2: 언론홍보/PR */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-green-600 mb-4">언론홍보/PR</h3>
-            <p className="text-gray-700 mb-4">
-              신뢰도 높은 언론 매체를 통해 기업의 긍정적인 이미지를 구축하고 메시지를 확산합니다.
-            </p>
-            <Link href="/services" className="text-green-600 hover:underline font-medium">
-              자세히 보기 &rarr;
-            </Link>
-          </div>
-
-          {/* Service 3: 위기관리 대응 */}
-          <div className="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-red-600 mb-4">위기관리 대응</h3>
-            <p className="text-gray-700 mb-4">
-              부정적인 이슈 발생 시 신속하고 체계적인 대응으로 기업의 명성을 보호합니다.
-            </p>
-            <Link href="/services" className="text-red-600 hover:underline font-medium">
-              자세히 보기 &rarr;
-            </Link>
-          </div>
-        </div>
-        <div className="mt-12">
-          <Link href="/services" className="bg-blue-600 text-white hover:bg-blue-700 text-lg font-semibold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
-            모든 서비스 보기
-          </Link>
-        </div>
+import { Megaphone, ShieldHalf, BotMessageSquare, MicVocal } from 'lucide-react';
+export const CoreServices = () => ( // Changed to named export
+  <section className="bg-gray-50 py-16 sm:py-24">
+    <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="text-center">
+        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">마케팅파크는 무엇을 잘하는가?</h2>
+        <p className="mt-4 text-lg text-gray-600">단순 홍보를 넘어, 종합 컨설팅 방식으로 성공적인 캠페인을 만듭니다.</p>
       </div>
-    </section>
-  );
-}
+      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        {services.map((service) => (
+          <div key={service.name} className="rounded-lg bg-white p-6 shadow-sm">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-600 text-white"><service.icon size={24} /></div>
+            <h3 className="mt-5 text-xl font-semibold text-gray-900">{service.name}</h3>
+            <p className="mt-2 text-base text-gray-600">{service.description}</p>
+            <Link href={service.href} className="mt-4 inline-block text-sm font-semibold text-lime-600 hover:text-lime-700">자세히 보기 &rarr;</Link>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const services = [ // Moved services array inside the component or outside if it's a constant
+  { name: '바이럴 마케팅', description: '기획력이 반영된 콘텐츠로 잠재 고객의 긍정 인식을 확산시킵니다.', href: '/services', icon: Megaphone },
+  { name: '언론홍보 / PR', description: '100개 이상 언론사 네트워크를 통해 가장 신뢰도 높은 방식으로 홍보합니다.', href: '/services', icon: MicVocal },
+  { name: '위기관리 대응', description: '부정적 여론 및 악성 댓글 확산을 방지하고 신속하게 대응합니다.', href: '/services', icon: ShieldHalf },
+  { name: '인플루언서 마케팅', description: '파워블로그, 유튜브, 맘카페 등 강력한 영향력으로 입소문을 만듭니다.', href: '/services', icon: BotMessageSquare },
+];
