@@ -11,6 +11,7 @@ import { z } from 'zod';
 
 // (Arch 7) .env.local 변수 사용
 const adminEmail = process.env.NEXT_PUBLIC_ADMIN_EMAIL_ADDRESS || 'ajong3287 @gmail.com';
+const directPhone = '010-5407-3287';
 
 // (Arch 5.2) Zod 스키마 (PRD FR6 [cite: 808-816] 기반)
 const contactSchema = z.object({
