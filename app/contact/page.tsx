@@ -6,14 +6,19 @@ import { ContactForm } from '../_components/contact/contact-form'; // (다음 �
 
 // (Story 1.1 AC.3)  SEO 설정
 export const metadata: Metadata = {
-  title: '상담 신청 | (주)마케팅파크',
-  description: '대표 직통 상담, 이메일, 간편 폼을 통해 (주)마케팅파크의 전문적인 방문 상담을 신청하세요. 귀사의 니즈에 맞는 현실적인 해답을 제안합니다.',
+  title: '상담 신청',
+  description: '대표 직통 상담 010-5407-3287, 이메일, 간편 폼을 통해 (주)마케팅파크의 전문적인 방문 상담을 신청하세요. 귀사의 니즈에 맞는 현실적인 해답을 제안합니다.',
+  keywords: ['상담 신청', '무료 상담', '방문 상담', '대표 직통', '마케팅 컨설팅'],
+  openGraph: {
+    title: '상담 신청 | 마케팅파크',
+    description: '대표 직통 상담 010-5407-3287. 전문적인 마케팅 컨설팅',
+    url: '/contact',
+  },
 };
 
 export default function ContactPage() {
-  // TODO: (중요) 실제 대표님 연락처로 교체해야 합니다.
-  const directPhone = '010-XXXX-XXXX';
-  const directEmail = process.env.ADMIN_EMAIL_ADDRESS || 'ajong3287 @gmail.com';
+  const directPhone = '010-5407-3287';
+  const directEmail = process.env.ADMIN_EMAIL_ADDRESS || 'ajong3287@gmail.com';
 
   return (
     <>

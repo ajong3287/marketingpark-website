@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Marketing Park Brand Colors */
+  --mp-primary: #84cc16;    /* Lime green - 성장, 활력 */
+  --mp-dark: #14532d;       /* Deep green - 신뢰, 안정 */
+  --mp-light: #f0fdf4;      /* Mint - 신선함 */
+  --mp-accent: #fbbf24;     /* Amber - 주목, 강조 */
+
+  /* Typography */
+  --font-headline: 'Montserrat', sans-serif;
+  --font-subheading: 'Space Grotesk', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
 }
 
 @theme inline {
@@ -10,6 +21,12 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Marketing Park Brand Colors for TailwindCSS */
+  --color-mp-primary: var(--mp-primary);
+  --color-mp-dark: var(--mp-dark);
+  --color-mp-light: var(--mp-light);
+  --color-mp-accent: var(--mp-accent);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +41,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   /* [엘리나이] Added for sticky footer layout in layout.tsx */
+}
+
+/* 4축 디자인: Background Patterns */
+
+/* Grid pattern - 50px 격자 (Lime green, 5% opacity) */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(132, 204, 22, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(132, 204, 22, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Organic blobs - 부드러운 radial gradients */
+.blob-bg {
+  background:
+    radial-gradient(circle at 20% 50%, rgba(132, 204, 22, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(20, 83, 45, 0.1) 0%, transparent 50%);
+}
+
+/* Trust gradient - Dark to primary linear gradient (CTA 섹션) */
+.trust-gradient {
+  background: linear-gradient(to right, var(--mp-dark), var(--mp-primary));
 }

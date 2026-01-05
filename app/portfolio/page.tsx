@@ -6,8 +6,14 @@ import { Building, Megaphone, ShieldHalf, Newspaper, Users } from 'lucide-react'
 
 // (Story 1.1 AC.3)  SEO 설정
 export const metadata: Metadata = {
-  title: '포트폴리오 | (주)마케팅파크',
-  description: '삼성, CJ, 기아, 농심, 미래에셋증권 등 주요 고객사와 함께한 (주)마케팅파크의 언론홍보, 바이럴 마케팅, 위기관리 성공 사례를 확인하세요.',
+  title: '포트폴리오',
+  description: '삼성, CJ, 기아, 농심, 미래에셋증권 등 주요 고객사와 함께한 (주)마케팅파크의 언론홍보, 바이럴 마케팅, 위기관리 성공 사례를 확인하세요. 200+ 프로젝트 성공 레퍼런스.',
+  keywords: ['포트폴리오', '성공 사례', '레퍼런스', '주요 고객사', 'SAMSUNG', 'CJ', '기아', '농심', '미래에셋증권'],
+  openGraph: {
+    title: '포트폴리오 | 마케팅파크',
+    description: '삼성, CJ, 기아 등 주요 고객사 성공 사례. 200+ 프로젝트 레퍼런스',
+    url: '/portfolio',
+  },
 };
 
 // (Story 2.2 AC.1)  주요 고객사 로고 (UX Spec 4.3) [cite: 831-832]
@@ -138,10 +144,10 @@ export default function PortfolioPage() {
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
-                  href="tel:[대표님-전화번호-입력]" // TODO: 실제 전화번호로 변경
+                  href="tel:010-5407-3287"
                   className="w-full rounded-md border border-lime-600 px-8 py-3 text-base font-medium text-lime-700 shadow-sm hover:bg-lime-50 sm:w-auto"
                 >
-                  대표 직통 상담: [010-XXXX-XXXX]
+                  대표 직통 상담: 010-5407-3287
                 </Link>
                 <Link
                   href="/contact"

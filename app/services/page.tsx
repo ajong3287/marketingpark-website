@@ -6,8 +6,14 @@ import Link from 'next/link';
 
 // (Story 1.1 AC.3)  SEO 설정
 export const metadata: Metadata = {
-  title: '서비스 소개 | (주)마케팅파크',
-  description: '바이럴 마케팅, 언론홍보, 위기관리 대응, 인플루언서 마케팅 등 (주)마케팅파크의 전문적이고 기획력 있는 종합 컨설팅 서비스를 확인하세요.',
+  title: '서비스 소개',
+  description: '바이럴 마케팅, 언론홍보, 위기관리 대응, 인플루언서 마케팅 등 (주)마케팅파크의 전문적이고 기획력 있는 종합 컨설팅 서비스를 확인하세요. 네이버 상위노출, PR, SNS 마케팅 전문.',
+  keywords: ['바이럴 마케팅', '언론홍보', '위기관리', '인플루언서 마케팅', '네이버 마케팅', 'PR 대행', 'SNS 마케팅'],
+  openGraph: {
+    title: '서비스 소개 | 마케팅파크',
+    description: '바이럴 마케팅, 언론홍보, 위기관리, 인플루언서 마케팅 전문',
+    url: '/services',
+  },
 };
 
 // (Story 2.1 AC.1)  서비스 카테고리 (PRD FR3 [cite: 808-816] 및 UX Spec 4.2 [cite: 831-832] 기반)
@@ -165,10 +171,10 @@ export default function ServicesPage() {
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="tel:[대표님-전화번호-입력]" // TODO: 실제 전화번호로 변경
+              href="tel:010-5407-3287"
               className="w-full rounded-md border border-lime-600 px-8 py-3 text-base font-medium text-lime-700 shadow-sm hover:bg-lime-50 sm:w-auto"
             >
-              대표 직통 상담: [010-XXXX-XXXX]
+              대표 직통 상담: 010-5407-3287
             </Link>
             <Link
               href="/contact"

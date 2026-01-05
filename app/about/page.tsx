@@ -5,8 +5,14 @@ import type { Metadata } from 'next';
 
 // (Story 1.1 AC.3)  SEO 설정
 export const metadata: Metadata = {
-  title: '회사 소개 | (주)마케팅파크',
-  description: '2014년부터 축적된 (주)마케팅파크의 비전, 연혁, 그리고 "종합 컨설팅 방식"의 핵심 경쟁력을 확인하세요.',
+  title: '회사 소개',
+  description: '2014년부터 축적된 (주)마케팅파크의 비전, 연혁, 그리고 "종합 컨설팅 방식"의 핵심 경쟁력을 확인하세요. 200+ 프로젝트, 50+ 고객사, 15년 경험.',
+  keywords: ['마케팅파크 소개', '회사 소개', '비전', '연혁', '핵심 경쟁력'],
+  openGraph: {
+    title: '회사 소개 | 마케팅파크',
+    description: '2014년부터 축적된 노하우와 종합 컨설팅 방식',
+    url: '/about',
+  },
 };
 
 // (Story 1.4 AC.3)  핵심 경쟁력 데이터 (PRD 2.1 FR2 [cite: 808-816] 및 회사 소개서 [cite: 265-286] 기반)
@@ -93,10 +99,10 @@ export default function AboutPage() {
                 주소: 서울시 은평구 통일로53길 9-21 B101호
               </p>
               <p className="mt-2">
-                대표 연락처: [010-XXXX-XXXX] (PRD FR8 [cite: 808-816])
+                대표 연락처: 010-5407-3287
               </p>
               <p className="mt-2">
-                이메일: [itemfree @marketingpark.co.kr] (PRD FR7 [cite: 808-816])
+                이메일: ajong3287@gmail.com
               </p>
             </div>
           </div>
