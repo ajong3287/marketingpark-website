@@ -2,6 +2,7 @@
 
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Building, Megaphone, ShieldHalf, Newspaper, Users } from 'lucide-react'; // (아이콘 예시)
 
 // (Story 1.1 AC.3)  SEO 설정
@@ -20,12 +21,12 @@ export const metadata: Metadata = {
 // (PRD 및 회사 소개서 [cite: 459, 461-683] 기반)
 // TODO: (public/images/clients/ 에 실제 로고 파일 필요)
 const keyClients = [
-  { name: 'SAMSUNG', logo: '/images/clients/placeholder.png' },
-  { name: 'CJ', logo: '/images/clients/placeholder.png' },
-  { name: 'KIA MOTORS', logo: '/images/clients/placeholder.png' },
-  { name: '농심', logo: '/images/clients/placeholder.png' },
-  { name: '미래에셋증권', logo: '/images/clients/placeholder.png' },
-  { name: 'KB국민은행', logo: '/images/clients/placeholder.png' },
+  { name: 'SAMSUNG', logo: '/images/clients/placeholder.svg' },
+  { name: 'CJ', logo: '/images/clients/placeholder.svg' },
+  { name: 'KIA MOTORS', logo: '/images/clients/placeholder.svg' },
+  { name: '농심', logo: '/images/clients/placeholder.svg' },
+  { name: '미래에셋증권', logo: '/images/clients/placeholder.svg' },
+  { name: 'KB국민은행', logo: '/images/clients/placeholder.svg' },
 ];
 
 // (Story 2.2 AC.2)  성공 사례 갤러리 (UX Spec 4.3) [cite: 831-832]
@@ -88,10 +89,14 @@ export default function PortfolioPage() {
               <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
                 {keyClients.map((client) => (
                   <div key={client.name} className="flex items-center justify-center grayscale transition hover:grayscale-0">
-                    <span className="text-lg font-semibold text-gray-400">
-                      {/* TODO: Image 태그로 교체 */}
-                      {client.name}
-                    </span>
+                    <Image
+                      src={client.logo}
+                      alt={`${client.name} 로고`}
+                      width={200}
+                      height={100}
+                      className="h-auto w-full max-w-[150px] object-contain"
+                      priority={false}
+                    />
                   </div>
                 ))}
               </div>

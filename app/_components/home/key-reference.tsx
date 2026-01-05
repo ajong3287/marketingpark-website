@@ -1,16 +1,17 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Youtube } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 const clients = [
-  { name: '삼성', emoji: '🏢', industry: '전자' },
-  { name: 'CJ', emoji: '🎬', industry: '엔터테인먼트' },
-  { name: '기아', emoji: '🚗', industry: '자동차' },
-  { name: '농심', emoji: '🍜', industry: '식품' },
-  { name: 'LG', emoji: '📱', industry: '전자' },
-  { name: '롯데', emoji: '🏪', industry: '유통' },
+  { name: '삼성', logo: '/images/clients/placeholder.svg', industry: '전자' },
+  { name: 'CJ', logo: '/images/clients/placeholder.svg', industry: '엔터테인먼트' },
+  { name: '기아', logo: '/images/clients/placeholder.svg', industry: '자동차' },
+  { name: '농심', logo: '/images/clients/placeholder.svg', industry: '식품' },
+  { name: 'LG', logo: '/images/clients/placeholder.svg', industry: '전자' },
+  { name: '롯데', logo: '/images/clients/placeholder.svg', industry: '유통' },
 ];
 
 export const KeyReference = () => {
@@ -87,11 +88,20 @@ export const KeyReference = () => {
           {clients.map((client) => (
             <motion.div
               key={client.name}
-              whileHover={prefersReducedMotion ? {} : { scale: 1.1, rotate: 5 }}
+              whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
               transition={{ duration: 0.3 }}
               className="rounded-2xl bg-white p-6 shadow-lg text-center border-2 border-gray-100 hover:border-lime-400"
             >
-              <div className="text-5xl mb-2">{client.emoji}</div>
+              <div className="mb-4 flex items-center justify-center h-16">
+                <Image
+                  src={client.logo}
+                  alt={`${client.name} 로고`}
+                  width={120}
+                  height={60}
+                  className="h-auto w-full max-w-[120px] object-contain grayscale hover:grayscale-0 transition-all"
+                  priority={false}
+                />
+              </div>
               <h4 className="font-bold text-gray-900" style={{ fontFamily: 'var(--font-subheading)' }}>
                 {client.name}
               </h4>
