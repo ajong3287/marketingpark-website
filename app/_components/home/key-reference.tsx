@@ -6,12 +6,12 @@ import { Youtube } from 'lucide-react';
 import { motion, useReducedMotion } from 'framer-motion';
 
 const clients = [
-  { name: '삼성', logo: '/images/clients/placeholder.svg', industry: '전자' },
-  { name: 'CJ', logo: '/images/clients/placeholder.svg', industry: '엔터테인먼트' },
-  { name: '기아', logo: '/images/clients/placeholder.svg', industry: '자동차' },
-  { name: '농심', logo: '/images/clients/placeholder.svg', industry: '식품' },
-  { name: 'LG', logo: '/images/clients/placeholder.svg', industry: '전자' },
-  { name: '롯데', logo: '/images/clients/placeholder.svg', industry: '유통' },
+  { name: '삼성', logo: '/images/clients/samsung.svg', industry: '전자' },
+  { name: 'CJ', logo: '/images/clients/cj.svg', industry: '엔터테인먼트' },
+  { name: '기아', logo: '/images/clients/kia.svg', industry: '자동차' },
+  { name: '농심', logo: '/images/clients/nongshim.svg', industry: '식품' },
+  { name: 'LG', logo: '/images/clients/lg.svg', industry: '전자' },
+  { name: '롯데', logo: '/images/clients/lotte.svg', industry: '유통' },
 ];
 
 export const KeyReference = () => {

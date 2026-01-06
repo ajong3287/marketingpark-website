@@ -19,14 +19,13 @@ export const metadata: Metadata = {
 
 // (Story 2.2 AC.1)  주요 고객사 로고 (UX Spec 4.3) [cite: 831-832]
 // (PRD 및 회사 소개서 [cite: 459, 461-683] 기반)
-// TODO: (public/images/clients/ 에 실제 로고 파일 필요)
 const keyClients = [
-  { name: 'SAMSUNG', logo: '/images/clients/placeholder.svg' },
-  { name: 'CJ', logo: '/images/clients/placeholder.svg' },
-  { name: 'KIA MOTORS', logo: '/images/clients/placeholder.svg' },
-  { name: '농심', logo: '/images/clients/placeholder.svg' },
-  { name: '미래에셋증권', logo: '/images/clients/placeholder.svg' },
-  { name: 'KB국민은행', logo: '/images/clients/placeholder.svg' },
+  { name: 'SAMSUNG', logo: '/images/clients/samsung.svg' },
+  { name: 'CJ', logo: '/images/clients/cj.svg' },
+  { name: 'KIA MOTORS', logo: '/images/clients/kia.svg' },
+  { name: '농심', logo: '/images/clients/nongshim.svg' },
+  { name: '미래에셋증권', logo: '/images/clients/miraeasset.svg' },
+  { name: 'KB국민은행', logo: '/images/clients/kb.svg' },
 ];
 
 // (Story 2.2 AC.2)  성공 사례 갤러리 (UX Spec 4.3) [cite: 831-832]
