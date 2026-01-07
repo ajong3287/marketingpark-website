@@ -3,6 +3,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // 성능 최적화 설정
   compress: true, // Gzip 압축 활성화
+  poweredByHeader: false, // X-Powered-By 헤더 제거 (보안)
+  generateEtags: true, // ETag 생성 (캐싱 개선)
 
   // 이미지 최적화 설정 (향후 이미지 추가 시 사용)
   images: {
@@ -41,6 +43,10 @@ const nextConfig: NextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
           },
         ],
       },
