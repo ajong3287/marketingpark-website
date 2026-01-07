@@ -177,7 +177,7 @@ export const CustomerReviews = () => {
           </p>
           <a
             href="/contact"
-            className="inline-block rounded-md bg-lime-600 dark:bg-lime-500 px-8 py-3 text-base font-medium text-white shadow-sm hover:bg-lime-700 dark:hover:bg-lime-600 transition-colors"
+            className="inline-block rounded-md bg-lime-600 dark:bg-lime-500 px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-lime-700 dark:hover:bg-lime-600 transition-colors"
           >
             상담 신청하기
           </a>
