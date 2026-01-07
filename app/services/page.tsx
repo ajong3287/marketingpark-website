@@ -82,12 +82,12 @@ export default function ServicesPage() {
   return (
     <>
       {/* 1. 페이지 헤더 */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-24">
         <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
             전문 서비스
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600">
+          <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
             (주)마케팅파크는 "무엇을" 잘하는가?
             <br />
             바이럴 마케팅부터 위기관리까지, 기획력이 반영된 종합 솔루션을 만나보세요.
@@ -100,7 +100,7 @@ export default function ServicesPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           
           {/* 2.1 탭 메뉴 (Scollable on Mobile) */}
-          <div className="mb-12 border-b border-gray-200">
+          <div className="mb-12 border-b border-gray-200 dark:border-gray-700">
             <nav className="-mb-px flex space-x-6 overflow-x-auto" aria-label="Tabs">
               {services.map((tab) => (
                 <a
@@ -108,8 +108,8 @@ export default function ServicesPage() {
                   href={`#${tab.id}`} // (MVP에서는 탭 이동 대신 #태그 사용 또는 단일 페이지만 표시)
                   className={
                     tab.id === selectedService.id
-                      ? 'border-lime-600 text-lime-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
-                      : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+                      ? 'border-lime-600 text-lime-600 dark:text-lime-400 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
+                      : 'border-transparent text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hover:border-gray-300 dark:hover:border-gray-600 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm'
                   }
                 >
                   {tab.name}
@@ -123,35 +123,35 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
             {/* 왼쪽: 설명 */}
             <div>
-              <span className="inline-flex items-center rounded-full bg-lime-100 px-3 py-1 text-sm font-medium text-lime-700">
+              <span className="inline-flex items-center rounded-full bg-lime-100 dark:bg-lime-900 px-3 py-1 text-sm font-medium text-lime-700 dark:text-lime-300">
                 {selectedService.name}
               </span>
-              <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                 {selectedService.title}
               </h2>
-              <p className="mt-6 text-lg text-gray-600">
+              <p className="mt-6 text-lg text-gray-600 dark:text-gray-300">
                 {selectedService.description}
               </p>
               <ul className="mt-8 space-y-3">
                 {selectedService.features.map((feature) => (
                   <li key={feature} className="flex items-start">
                     <div className="flex-shrink-0">
-                      <svg className="h-6 w-6 text-lime-600" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
+                      <svg className="h-6 w-6 text-lime-600 dark:text-lime-400" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" /></svg>
                     </div>
-                    <span className="ml-3 text-base text-gray-700">{feature}</span>
+                    <span className="ml-3 text-base text-gray-700 dark:text-gray-300">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            
+
             {/* 오른쪽: 이미지 또는 관련 레퍼런스 */}
-            <div className="flex items-center justify-center rounded-lg bg-gray-50 p-8 shadow-sm border border-gray-100">
+            <div className="flex items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-800 p-8 shadow-sm border border-gray-100 dark:border-gray-700">
               <div className="text-center">
-                <p className="text-sm font-semibold text-gray-500">관련 포트폴리오 (예시)</p>
-                <p className="mt-2 text-xl font-bold text-gray-900">
+                <p className="text-sm font-semibold text-gray-500 dark:text-gray-400">관련 포트폴리오 (예시)</p>
+                <p className="mt-2 text-xl font-bold text-gray-900 dark:text-white">
                   {selectedService.reference}
                 </p>
-                <Link href="/portfolio" className="mt-4 inline-block text-sm font-semibold text-lime-600 hover:text-lime-700">
+                <Link href="/portfolio" className="mt-4 inline-block text-sm font-semibold text-lime-600 dark:text-lime-400 hover:text-lime-700 dark:hover:text-lime-300">
                   포트폴리오 더보기 &rarr;
                 </Link>
               </div>
@@ -161,24 +161,24 @@ export default function ServicesPage() {
       </section>
 
       {/* 3. (Story 2.1 AC.4)  최종 행동 유도 (CTA) */}
-      <section className="bg-white py-16 sm:py-24 border-t">
+      <section className="bg-white dark:bg-gray-900 py-16 sm:py-24 border-t border-gray-200 dark:border-gray-700">
         <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             모든 비즈니스는 저마다의 다른 고민을 가지고 있습니다.
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
             (주)마케팅파크의 전문가는 귀사의 니즈를 직접 듣고 현실적인 해답을 제안합니다.
           </p>
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
               href="tel:010-5407-3287"
-              className="w-full rounded-md border border-lime-600 px-8 py-3 text-base font-medium text-lime-700 shadow-sm hover:bg-lime-50 sm:w-auto"
+              className="w-full rounded-md border border-lime-600 dark:border-lime-500 px-8 py-3 text-base font-medium text-lime-700 dark:text-lime-400 shadow-sm hover:bg-lime-50 dark:hover:bg-lime-900 sm:w-auto"
             >
               대표 직통 상담: 010-5407-3287
             </Link>
             <Link
               href="/contact"
-              className="w-full rounded-md bg-lime-600 px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-700 sm:w-auto"
+              className="w-full rounded-md bg-lime-600 dark:bg-lime-500 px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-700 dark:hover:bg-lime-600 sm:w-auto"
             >
               방문 상담 신청 (간편 폼)
             </Link>

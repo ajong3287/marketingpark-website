@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 
 // 카테고리 색상 매핑
 const categoryColors: Record<BlogPost['category'], { bg: string; text: string; border: string }> = {
-  '마케팅 팁': { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
-  '성공 사례': { bg: 'bg-lime-50', text: 'text-lime-700', border: 'border-lime-200' },
-  '업계 소식': { bg: 'bg-purple-50', text: 'text-purple-700', border: 'border-purple-200' },
+  '마케팅 팁': { bg: 'bg-blue-50 dark:bg-blue-900', text: 'text-blue-700 dark:text-blue-300', border: 'border-blue-200 dark:border-blue-700' },
+  '성공 사례': { bg: 'bg-lime-50 dark:bg-lime-900', text: 'text-lime-700 dark:text-lime-300', border: 'border-lime-200 dark:border-lime-700' },
+  '업계 소식': { bg: 'bg-purple-50 dark:bg-purple-900', text: 'text-purple-700 dark:text-purple-300', border: 'border-purple-200 dark:border-purple-700' },
 };
 
 // 블로그 카드 컴포넌트
@@ -30,7 +30,7 @@ function BlogCard({ post }: { post: BlogPost }) {
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group block rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:shadow-lg hover:border-lime-600"
+      className="group block rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm transition-all hover:shadow-lg hover:border-lime-600 dark:hover:border-lime-500"
     >
       {/* 카테고리 배지 */}
       <div className="mb-4 flex items-center gap-3">
@@ -41,17 +41,17 @@ function BlogCard({ post }: { post: BlogPost }) {
       </div>
 
       {/* 제목 */}
-      <h3 className="text-xl font-bold text-gray-900 group-hover:text-lime-700 transition-colors mb-3">
+      <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-lime-700 dark:group-hover:text-lime-400 transition-colors mb-3">
         {post.title}
       </h3>
 
       {/* 설명 */}
-      <p className="text-base text-gray-600 mb-4 line-clamp-2">
+      <p className="text-base text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">
         {post.description}
       </p>
 
       {/* 메타 정보 */}
-      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 mb-4">
+      <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400 mb-4">
         <div className="flex items-center gap-1">
           <Calendar size={14} />
           <span>{post.date}</span>
@@ -70,7 +70,7 @@ function BlogCard({ post }: { post: BlogPost }) {
         {post.tags.slice(0, 3).map((tag) => (
           <span
             key={tag}
-            className="inline-block rounded-md bg-gray-100 px-2 py-1 text-xs text-gray-600"
+            className="inline-block rounded-md bg-gray-100 dark:bg-gray-700 px-2 py-1 text-xs text-gray-600 dark:text-gray-300"
           >
             #{tag}
           </span>
@@ -78,7 +78,7 @@ function BlogCard({ post }: { post: BlogPost }) {
       </div>
 
       {/* 더 읽기 링크 */}
-      <div className="flex items-center gap-1 text-lime-700 font-medium group-hover:gap-2 transition-all">
+      <div className="flex items-center gap-1 text-lime-700 dark:text-lime-400 font-medium group-hover:gap-2 transition-all">
         <span>더 읽기</span>
         <ChevronRight size={16} />
       </div>
@@ -105,11 +105,11 @@ export default function BlogPage() {
       </section>
 
       {/* 카테고리 필터 (향후 확장) */}
-      <section className="bg-gray-50 py-8 border-b">
+      <section className="bg-gray-50 dark:bg-gray-800 py-8 border-b border-gray-200 dark:border-gray-700">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="text-sm font-medium text-gray-700">카테고리:</span>
-            <button className="rounded-full bg-lime-600 px-4 py-2 text-sm font-medium text-white">
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">카테고리:</span>
+            <button className="rounded-full bg-lime-600 dark:bg-lime-500 px-4 py-2 text-sm font-medium text-white hover:bg-lime-700 dark:hover:bg-lime-600 transition-colors">
               전체 ({allPosts.length})
             </button>
             {categories.map((category) => {
@@ -129,12 +129,12 @@ export default function BlogPage() {
       </section>
 
       {/* 블로그 포스트 그리드 */}
-      <section className="py-16 sm:py-24">
+      <section className="py-16 sm:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* 최신 포스트 (Featured) */}
           {allPosts.length > 0 && (
             <div className="mb-16">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">최신 글</h2>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">최신 글</h2>
               <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
                 <BlogCard post={allPosts[0]} />
                 {allPosts[1] && <BlogCard post={allPosts[1]} />}
@@ -144,7 +144,7 @@ export default function BlogPage() {
 
           {/* 전체 포스트 */}
           <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">모든 글</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">모든 글</h2>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
               {allPosts.slice(2).map((post) => (
                 <BlogCard key={post.slug} post={post} />
@@ -155,8 +155,8 @@ export default function BlogPage() {
           {/* 빈 상태 (포스트 없을 경우) */}
           {allPosts.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-lg text-gray-600">아직 작성된 글이 없습니다.</p>
-              <p className="text-sm text-gray-500 mt-2">곧 유익한 콘텐츠로 찾아뵙겠습니다!</p>
+              <p className="text-lg text-gray-600 dark:text-gray-300">아직 작성된 글이 없습니다.</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">곧 유익한 콘텐츠로 찾아뵙겠습니다!</p>
             </div>
           )}
         </div>

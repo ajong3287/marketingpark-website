@@ -59,13 +59,13 @@ export const CoreServices = () => (
     <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <div className="text-center">
         <h2
-          className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl"
           style={{ fontFamily: 'var(--font-headline)' }}
         >
           마케팅파크는 무엇을 잘하는가?
         </h2>
         <p
-          className="mt-4 text-lg text-gray-600"
+          className="mt-4 text-lg text-gray-600 dark:text-gray-300"
           style={{ fontFamily: 'var(--font-body)' }}
         >
           단순 홍보를 넘어, 종합 컨설팅 방식으로 성공적인 캠페인을 만듭니다.

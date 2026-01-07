@@ -98,14 +98,14 @@ export const CustomerReviews = () => {
   const prefersReducedMotion = useReducedMotion();
 
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-16 sm:py-24">
+    <section className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 py-16 sm:py-24">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* 섹션 헤더 */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             고객 후기
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
+          <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
             (주)마케팅파크와 함께한 고객사들의 생생한 후기를 확인하세요
           </p>
         </div>
@@ -119,7 +119,7 @@ export const CustomerReviews = () => {
               whileInView={prefersReducedMotion ? {} : { opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: prefersReducedMotion ? 0 : 0.5, delay: prefersReducedMotion ? 0 : idx * 0.1 }}
-              className="relative bg-white p-6 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow"
+              className="relative bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow"
             >
               {/* 따옴표 아이콘 */}
               <div className="absolute top-4 right-4 text-lime-600 opacity-20">
@@ -132,21 +132,21 @@ export const CustomerReviews = () => {
               </div>
 
               {/* 후기 내용 */}
-              <p className="text-gray-700 leading-relaxed mb-6 relative z-10">
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 relative z-10">
                 "{review.comment}"
               </p>
 
               {/* 고객 정보 */}
-              <div className="border-t pt-4 border-gray-100">
+              <div className="border-t pt-4 border-gray-100 dark:border-gray-700">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-semibold text-gray-900">{review.name}</p>
-                    <p className="text-sm text-gray-600">{review.position}</p>
-                    <p className="text-sm font-medium text-lime-700 mt-1">{review.company}</p>
+                    <p className="font-semibold text-gray-900 dark:text-white">{review.name}</p>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">{review.position}</p>
+                    <p className="text-sm font-medium text-lime-700 dark:text-lime-400 mt-1">{review.company}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-xs text-gray-500">{review.project}</p>
-                    <p className="text-xs text-gray-400 mt-1">{review.date}</p>
+                    <p className="text-xs text-gray-500 dark:text-gray-400">{review.project}</p>
+                    <p className="text-xs text-gray-400 dark:text-gray-500 mt-1">{review.date}</p>
                   </div>
                 </div>
               </div>
@@ -156,15 +156,15 @@ export const CustomerReviews = () => {
 
         {/* 평균 평점 요약 */}
         <div className="mt-16 text-center">
-          <div className="inline-flex flex-col items-center bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
+          <div className="inline-flex flex-col items-center bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
             <div className="flex items-center gap-2 mb-2">
               <span className="text-5xl font-bold text-lime-600">5.0</span>
               <div className="flex flex-col items-start">
                 <RatingStars rating={5} />
-                <p className="text-sm text-gray-600 mt-1">평균 평점</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">평균 평점</p>
               </div>
             </div>
-            <p className="text-gray-600 mt-4">
+            <p className="text-gray-600 dark:text-gray-300 mt-4">
               <strong className="text-lime-700">{reviews.length}개</strong>의 고객 후기
             </p>
           </div>
@@ -172,12 +172,12 @@ export const CustomerReviews = () => {
 
         {/* CTA */}
         <div className="mt-12 text-center">
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
             귀사의 성공 스토리를 함께 만들어가고 싶습니다
           </p>
           <a
             href="/contact"
-            className="inline-block rounded-md bg-lime-600 px-8 py-3 text-base font-medium text-white shadow-sm hover:bg-lime-700 transition-colors"
+            className="inline-block rounded-md bg-lime-600 dark:bg-lime-500 px-8 py-3 text-base font-medium text-white shadow-sm hover:bg-lime-700 dark:hover:bg-lime-600 transition-colors"
           >
             상담 신청하기
           </a>

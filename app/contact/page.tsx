@@ -23,13 +23,13 @@ export default function ContactPage() {
   return (
     <>
       {/* 1. 페이지 헤더 (PRD AC.1)  */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-24">
         <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
             상담 신청
           </h1>
-          <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600">
-            (Story 2.1 AC.4) 
+          <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
+            (Story 2.1 AC.4)
             "모든 비즈니스는 저마다의 다른 고민을 가지고 있습니다.
             <br />
             '마케팅파크'의 전문가는 귀사의 니즈를 직접 듣고 현실적인 해답을 제안합니다."
@@ -44,22 +44,22 @@ export default function ContactPage() {
             
             {/* 2.1 연락 옵션 1 & 2 (전화/이메일) */}
             <div className="lg:col-span-1">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                 가장 빠른 방법
               </h2>
-              <p className="mt-4 text-lg text-gray-600">
+              <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
                 지금 바로 연락주시면, 대표 전문가가 직접 상담합니다.
               </p>
-              
+
               {/* 옵션 1: 대표 직통 상담 (Primary) */}
-              <div className="mt-8 rounded-lg border border-lime-600 bg-lime-50 p-6">
+              <div className="mt-8 rounded-lg border border-lime-600 dark:border-lime-500 bg-lime-50 dark:bg-lime-900 p-6">
                 <div className="flex items-center gap-4">
-                  <Phone className="h-8 w-8 flex-shrink-0 text-lime-700" />
+                  <Phone className="h-8 w-8 flex-shrink-0 text-lime-700 dark:text-lime-300" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">대표 직통 상담</h3>
-                    <a 
-                      href={`tel:${directPhone}`} 
-                      className="text-2xl font-bold text-lime-700 hover:text-lime-800"
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">대표 직통 상담</h3>
+                    <a
+                      href={`tel:${directPhone}`}
+                      className="text-2xl font-bold text-lime-700 dark:text-lime-300 hover:text-lime-800 dark:hover:text-lime-200"
                     >
                       {directPhone}
                     </a>
@@ -68,14 +68,14 @@ export default function ContactPage() {
               </div>
 
               {/* 옵션 2: 이메일 문의 (Secondary) */}
-              <div className="mt-6 rounded-lg border border-gray-200 p-6">
+              <div className="mt-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6">
                 <div className="flex items-center gap-4">
-                  <Mail className="h-8 w-8 flex-shrink-0 text-gray-500" />
+                  <Mail className="h-8 w-8 flex-shrink-0 text-gray-500 dark:text-gray-400" />
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900">이메일 문의</h3>
-                    <a 
-                      href={`mailto:${directEmail}`} 
-                      className="text-lg font-medium text-gray-600 hover:text-lime-700"
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">이메일 문의</h3>
+                    <a
+                      href={`mailto:${directEmail}`}
+                      className="text-lg font-medium text-gray-600 dark:text-gray-300 hover:text-lime-700 dark:hover:text-lime-400"
                     >
                       {directEmail}
                     </a>
@@ -86,10 +86,10 @@ export default function ContactPage() {
 
             {/* 2.2 연락 옵션 3 (간편 폼) (PRD AC.2)  */}
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
                 상담 신청 (3단계 폼)
               </h2>
-              <p className="mt-4 text-lg text-gray-600">
+              <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
                 통화가 어려우신 경우, 아래 내용을 남겨주시면 신속하게 연락드리겠습니다.
               </p>
 

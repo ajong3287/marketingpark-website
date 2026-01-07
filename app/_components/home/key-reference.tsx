@@ -19,7 +19,7 @@ export const KeyReference = () => {
   const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL || '#';
 
   return (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white dark:bg-gray-900 py-16 sm:py-24">
       <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* YouTube 채널 강조 섹션 */}
         <div className="rounded-3xl p-8 sm:p-12" style={{ background: 'linear-gradient(to right, var(--mp-dark), var(--mp-primary))' }}>
@@ -74,12 +74,12 @@ export const KeyReference = () => {
         {/* 주요 고객사 섹션 */}
         <div className="mt-16 text-center">
           <h3
-            className="text-2xl font-bold text-gray-900 sm:text-3xl"
+            className="text-2xl font-bold text-gray-900 dark:text-white sm:text-3xl"
             style={{ fontFamily: 'var(--font-headline)' }}
           >
             주요 고객사
           </h3>
-          <p className="mt-2 text-gray-600" style={{ fontFamily: 'var(--font-body)' }}>
+          <p className="mt-2 text-gray-600 dark:text-gray-300" style={{ fontFamily: 'var(--font-body)' }}>
             대형 기업부터 중소기업까지, 다양한 업종의 성공적인 프로젝트 경험
           </p>
         </div>
@@ -90,7 +90,7 @@ export const KeyReference = () => {
               key={client.name}
               whileHover={prefersReducedMotion ? {} : { scale: 1.05 }}
               transition={{ duration: 0.3 }}
-              className="rounded-2xl bg-white p-6 shadow-lg text-center border-2 border-gray-100 hover:border-lime-400"
+              className="rounded-2xl bg-white dark:bg-gray-800 p-6 shadow-lg text-center border-2 border-gray-100 dark:border-gray-700 hover:border-lime-400"
             >
               <div className="mb-4 flex items-center justify-center h-16">
                 <Image
@@ -102,10 +102,10 @@ export const KeyReference = () => {
                   priority={false}
                 />
               </div>
-              <h4 className="font-bold text-gray-900" style={{ fontFamily: 'var(--font-subheading)' }}>
+              <h4 className="font-bold text-gray-900 dark:text-white" style={{ fontFamily: 'var(--font-subheading)' }}>
                 {client.name}
               </h4>
-              <p className="text-xs text-gray-500 mt-1">{client.industry}</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{client.industry}</p>
             </motion.div>
           ))}
         </div>

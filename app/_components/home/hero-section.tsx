@@ -14,7 +14,7 @@ export const HeroSection = () => {
   ];
 
   return (
-    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-white">
+    <section className="relative h-screen min-h-[600px] w-full overflow-hidden bg-white dark:bg-gray-900">
       {/* Grid 배경 패턴 */}
       <div className="absolute inset-0 grid-bg" />
 
@@ -72,7 +72,7 @@ export const HeroSection = () => {
 
         {/* 서브헤드 */}
         <p
-          className="mt-6 max-w-2xl text-lg text-gray-700"
+          className="mt-6 max-w-2xl text-lg text-gray-700 dark:text-gray-300"
           style={{ fontFamily: 'var(--font-body)' }}
         >
           제품과 브랜드에 대한 깊은 이해와 통찰력,<br />
@@ -99,7 +99,7 @@ export const HeroSection = () => {
               >
                 {stat.value}
               </div>
-              <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+              <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">{stat.label}</div>
             </motion.div>
           ))}
         </div>
@@ -118,7 +118,7 @@ export const HeroSection = () => {
           </Link>
           <Link
             href="/contact"
-            className="rounded-md border px-6 py-3 text-base font-medium hover:bg-gray-50 transition-all"
+            className="rounded-md border px-6 py-3 text-base font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-all dark:text-gray-100"
             style={{
               fontFamily: 'var(--font-subheading)',
               borderColor: 'var(--mp-primary)',

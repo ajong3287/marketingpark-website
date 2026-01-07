@@ -66,12 +66,12 @@ export default function PortfolioPage() {
   return (
     <>
       {/* 1. 페이지 헤더 */}
-      <section className="bg-gray-50 py-16 sm:py-24">
+      <section className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-24">
         <div className="container mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl">
                 포트폴리오
               </h1>
-              <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600">
+              <p className="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
                 (주)마케팅파크는 삼성, CJ, 기아자동차 등 [cite: 459, 461-683] 국내외 유수 기업 및 공공기관의
                 <br />
                 수많은 프로모션을 성공적으로 이끌어왔습니다.
@@ -80,9 +80,9 @@ export default function PortfolioPage() {
           </section>
     
           {/* 2. (Story 2.2 AC.1)  주요 고객사 로고 */}
-          <section className="bg-white py-16">
+          <section className="bg-white dark:bg-gray-800 py-16">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                 주요 고객사
               </h2>
               <div className="mt-12 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
@@ -103,31 +103,31 @@ export default function PortfolioPage() {
           </section>
     
           {/* 3. (Story 2.2 AC.2)  성공 사례 갤러리 */}
-          <section className="bg-gray-50 py-16 sm:py-24">
+          <section className="bg-gray-50 dark:bg-gray-900 py-16 sm:py-24">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                   주요 성공 사례
                 </h2>
-                <p className="mt-4 text-lg text-gray-600">
+                <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
                   '구경'하시면서  마케팅파크의 전문성을 확인해 보세요.
                 </p>
               </div>
               <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
                 {portfolioItems.map((item) => (
-                  <div key={item.title} className="flex flex-col rounded-lg bg-white p-6 shadow-sm border border-gray-100 transition-all hover:shadow-md">
+                  <div key={item.title} className="flex flex-col rounded-lg bg-white dark:bg-gray-800 p-6 shadow-sm border border-gray-100 dark:border-gray-700 transition-all hover:shadow-md">
                     <div className="flex-shrink-0">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-600 text-white">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-600 dark:bg-lime-500 text-white">
                         <item.icon size={24} />
                       </div>
                     </div>
                     <div className="mt-5 flex-grow">
-                      <h3 className="text-xl font-semibold text-gray-900">{item.title}</h3>
-                      <p className="mt-1 text-sm font-medium text-lime-700">{item.category}</p>
-                      <p className="mt-3 text-base text-gray-600">{item.description}</p>
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{item.title}</h3>
+                      <p className="mt-1 text-sm font-medium text-lime-700 dark:text-lime-400">{item.category}</p>
+                      <p className="mt-3 text-base text-gray-600 dark:text-gray-300">{item.description}</p>
                     </div>
                     <div className="mt-6">
-                      <Link href={item.link} className="text-sm font-semibold text-lime-600 hover:text-lime-700">
+                      <Link href={item.link} className="text-sm font-semibold text-lime-600 dark:text-lime-400 hover:text-lime-700 dark:hover:text-lime-300">
                         자세히 보기 (준비중) &rarr;
                       </Link>
                     </div>
@@ -138,24 +138,24 @@ export default function PortfolioPage() {
           </section>
     
           {/* 4. (Story 2.2 AC.5)  최종 행동 유도 (CTA) */}
-          <section className="bg-white py-16 sm:py-24 border-t">
+          <section className="bg-white dark:bg-gray-800 py-16 sm:py-24 border-t border-gray-200 dark:border-gray-700">
             <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                 귀사의 성공 사례를 만들 준비가 되었습니다.
               </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                (주)마케팅파크의 전문가는 귀사의 니즈를 직접 듣고 [cite: 2] 현실적인 해답을 제안합니다. 
+              <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+                (주)마케팅파크의 전문가는 귀사의 니즈를 직접 듣고 [cite: 2] 현실적인 해답을 제안합니다.
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <Link
                   href="tel:010-5407-3287"
-                  className="w-full rounded-md border border-lime-600 px-8 py-3 text-base font-medium text-lime-700 shadow-sm hover:bg-lime-50 sm:w-auto"
+                  className="w-full rounded-md border border-lime-600 dark:border-lime-500 px-8 py-3 text-base font-medium text-lime-700 dark:text-lime-400 shadow-sm hover:bg-lime-50 dark:hover:bg-lime-900 sm:w-auto"
                 >
                   대표 직통 상담: 010-5407-3287
                 </Link>
                 <Link
                   href="/contact"
-                  className="w-full rounded-md bg-lime-600 px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-700 sm:w-auto"
+                  className="w-full rounded-md bg-lime-600 dark:bg-lime-500 px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-700 dark:hover:bg-lime-600 sm:w-auto"
                 >
                   방문 상담 신청 (간편 폼)
                 </Link>
