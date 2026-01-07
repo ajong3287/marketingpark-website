@@ -1,8 +1,8 @@
 // (Story 3.1) 상담 신청 페이지 (UI)
 
 import type { Metadata } from 'next';
-import { Phone, Mail, Send } from 'lucide-react';
-import { ContactForm } from '../_components/contact/contact-form'; // (다음 단계에서 생성)
+import { Phone, Mail } from 'lucide-react';
+import { MultiStepContactForm } from '../_components/contact/multi-step-contact-form';
 
 // (Story 1.1 AC.3)  SEO 설정
 export const metadata: Metadata = {
@@ -87,15 +87,15 @@ export default function ContactPage() {
             {/* 2.2 연락 옵션 3 (간편 폼) (PRD AC.2)  */}
             <div className="lg:col-span-2">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900">
-                간편 상담 신청 (폼)
+                상담 신청 (3단계 폼)
               </h2>
               <p className="mt-4 text-lg text-gray-600">
                 통화가 어려우신 경우, 아래 내용을 남겨주시면 신속하게 연락드리겠습니다.
               </p>
-              
-              {/* 폼 컴포넌트 호출 */}
+
+              {/* 다단계 폼 컴포넌트 호출 */}
               <div className="mt-8">
-                <ContactForm />
+                <MultiStepContactForm />
               </div>
             </div>
 
