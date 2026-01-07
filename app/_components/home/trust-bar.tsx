@@ -16,7 +16,7 @@ export const TrustBar = () => {
         <h3 className="text-center text-base font-semibold text-gray-600 dark:text-gray-300">(주)마케팅파크와 함께하는 주요 고객사</h3>
         <div className="mt-8 grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-6">
           {clients.map((client) => (
-            <div key={client.name} className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+            <div key={client.name} className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
               <Image
                 src={client.logo}
                 alt={client.alt}

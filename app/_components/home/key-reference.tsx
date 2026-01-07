@@ -98,7 +98,7 @@ export const KeyReference = () => {
                   alt={`${client.name} 로고`}
                   width={120}
                   height={60}
-                  className="h-auto w-full max-w-[120px] object-contain grayscale hover:grayscale-0 transition-all"
+                  className="h-auto w-full max-w-[120px] object-contain opacity-80 hover:opacity-100 transition-opacity"
                   priority={false}
                 />
               </div>

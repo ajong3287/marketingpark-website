@@ -49,11 +49,11 @@ export const Footer = () => { // Changed to named export
             <h3 className="text-sm font-semibold uppercase tracking-wider text-gray-900 dark:text-white">Contact Us</h3>
             <ul className="mt-4 space-y-3 text-sm text-gray-600 dark:text-gray-300">
               <li>(주)마케팅파크 (Since 2014)</li>
-              <li>대표: 서종원</li>
+              <li>대표: 박종수</li>
               <li>주소: 서울시 은평구 통일로53길 9-21 B101호</li>
               <li>대표 연락처: 010-5407-3287</li>
-              <li>사업자등록번호: [TODO: 사업자등록번호]</li>
-              <li>이메일: itemfree @marketingpark.co.kr</li>
+              <li>사업자등록번호: 203-06-67621</li>
+              <li>이메일: itemfree@marketingpark.co.kr</li>
             </ul>
           </div>
         </div>
