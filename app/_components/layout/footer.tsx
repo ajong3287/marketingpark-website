@@ -1,8 +1,9 @@
 // (Story 1.2) 공통 푸터 컴포넌트
 // [엘리나이]
 import Link from 'next/link';
+import Image from 'next/image';
 import { Youtube, Rss } from 'lucide-react';
-    
+
 export const Footer = () => { // Changed to named export
   const blogUrl = process.env.NEXT_PUBLIC_BLOG_URL || '#';
   const youtubeUrl = process.env.NEXT_PUBLIC_YOUTUBE_URL || '#';
@@ -12,8 +13,15 @@ export const Footer = () => { // Changed to named export
       <div className="container mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-wrap justify-between gap-8">
           <div>
-            <Link href="/" className="text-2xl font-bold text-lime-600 dark:text-lime-500">
-              MarketingPark
+            <Link href="/" className="block">
+              <Image
+                src="/images/marketingpark-logo.jpg"
+                alt="마케팅파크 로고"
+                width={200}
+                height={66}
+                className="h-auto w-48"
+                priority={false}
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm text-gray-500 dark:text-gray-400">
               No. 1 Creative Online Marketing. <br />

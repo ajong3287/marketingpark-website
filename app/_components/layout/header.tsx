@@ -1,8 +1,9 @@
 // (Story 1.2) 공통 헤더 컴포넌트
 // [엘리나이]
 import Link from 'next/link';
+import Image from 'next/image';
 import { Youtube, Rss } from 'lucide-react';
-import { ThemeToggle } from './theme-toggle'; 
+import { ThemeToggle } from './theme-toggle';
 
 const navItems = [
   { name: '회사 소개', href: '/about' },
@@ -14,8 +15,15 @@ export const Header = () => { // Changed to named export
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-white/90 backdrop-blur-sm dark:bg-gray-900/90 dark:border-gray-800">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link href="/" className="text-2xl font-bold text-lime-600">
-          MarketingPark
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/images/marketingpark-logo.jpg"
+            alt="마케팅파크 로고"
+            width={150}
+            height={50}
+            className="h-auto w-32 sm:w-40"
+            priority={true}
+          />
         </Link>
         <nav className="hidden items-center space-x-6 md:flex">
           {navItems.map((item) => (
