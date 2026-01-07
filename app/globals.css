@@ -64,3 +64,45 @@ body {
 .trust-gradient {
   background: linear-gradient(to right, var(--mp-dark), var(--mp-primary));
 }
+
+/* Accessibility: Enhanced focus styles */
+*:focus-visible {
+  outline: 2px solid #84cc16;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Button focus states */
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #84cc16;
+  outline-offset: 2px;
+}
+
+/* Form input focus states */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #84cc16;
+  outline-offset: 0;
+  border-color: #84cc16;
+}
+
+/* Dark mode focus styles */
+@media (prefers-color-scheme: dark) {
+  *:focus-visible {
+    outline-color: #a3e635;
+  }
+
+  button:focus-visible,
+  a:focus-visible {
+    outline-color: #a3e635;
+  }
+
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline-color: #a3e635;
+    border-color: #a3e635;
+  }
+}

@@ -3,6 +3,7 @@ import { montserrat, spaceGrotesk, notoSansKR } from './_styles/fonts'; // 4축 
 import './globals.css';
 import { Header } from './_components/layout/header';
 import { Footer } from './_components/layout/footer';
+import { Providers } from './providers';
 
 // Viewport 설정 분리 (Next.js 16 권장 패턴)
 export const viewport: Viewport = {
@@ -144,6 +145,7 @@ export default function RootLayout({
     <html
       lang="ko"
       className={`${montserrat.variable} ${spaceGrotesk.variable} ${notoSansKR.variable} ${notoSansKR.className}`}
+      suppressHydrationWarning
     >
       <head>
         <script
@@ -159,12 +161,20 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex min-h-screen flex-col bg-white text-gray-900">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+      <body className="flex min-h-screen flex-col bg-white text-gray-900 dark:bg-gray-900 dark:text-white">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-lime-600 focus:px-4 focus:py-2 focus:text-white focus:shadow-lg focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2"
+        >
+          본문으로 건너뛰기
+        </a>
+        <Providers>
+          <Header />
+          <main id="main-content" className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
