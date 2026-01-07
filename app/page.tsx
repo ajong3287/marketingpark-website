@@ -14,6 +14,10 @@ const KeyReference = dynamic(() => import('./_components/home/key-reference').th
   loading: () => <div className="h-96 flex items-center justify-center"><div className="text-gray-400">Loading...</div></div>
 });
 
+const CustomerReviews = dynamic(() => import('./_components/home/customer-reviews').then(mod => ({ default: mod.CustomerReviews })), {
+  loading: () => <div className="h-96 flex items-center justify-center"><div className="text-gray-400">Loading...</div></div>
+});
+
 const FinalCta = dynamic(() => import('./_components/home/final-cta').then(mod => ({ default: mod.FinalCta })), {
   loading: () => <div className="h-64 flex items-center justify-center"><div className="text-gray-400">Loading...</div></div>
 });
@@ -35,6 +39,7 @@ export default function HomePage() {
       <TrustBar />
       <CoreServices />
       <KeyReference />
+      <CustomerReviews />
       <FinalCta />
     </>
   );
