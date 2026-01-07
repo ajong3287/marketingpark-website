@@ -30,7 +30,7 @@ type ContactFormData = z.infer<typeof contactSchema>;
 // TODO: (Arch 2) [cite: 1912, 2269-2280] 'npx shadcn-ui @latest init', 'add button', 'add input', 'add label', 'add textarea' 실행 필요
 const Input = (props: any) => <input className="w-full rounded border border-gray-300 px-3 py-2 shadow-sm" {...props} />;
 const Textarea = (props: any) => <textarea className="w-full rounded border border-gray-300 px-3 py-2 shadow-sm" {...props} />;
-const Button = (props: any) => <button className="rounded-md bg-lime-600 px-6 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-700" {...props} />;
+const Button = (props: any) => <button className="rounded-md bg-lime-700 px-6 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-800" {...props} />;
 const Label = (props: any) => <label className="block text-sm font-medium text-gray-700" {...props} />;
 
 export const ContactForm = () => {

@@ -44,7 +44,7 @@ export const Header = () => { // Changed to named export
           <Link href="tel:010-5407-3287" className="text-sm font-semibold text-gray-900 dark:text-gray-100 hover:text-lime-600">
             대표 직통 상담: 010-5407-3287
           </Link>
-          <Link href="/contact" className="rounded-md bg-lime-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600">
+          <Link href="/contact" className="rounded-md bg-lime-700 px-4 py-2 text-sm font-medium text-white shadow-sm transition-colors hover:bg-lime-800 dark:bg-lime-500 dark:hover:bg-lime-600">
             방문 상담 신청
           </Link>
         </div>

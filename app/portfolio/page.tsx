@@ -155,7 +155,7 @@ export default function PortfolioPage() {
                 </Link>
                 <Link
                   href="/contact"
-                  className="w-full rounded-md bg-lime-600 dark:bg-lime-500 px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-700 dark:hover:bg-lime-600 sm:w-auto"
+                  className="w-full rounded-md bg-lime-700 dark:bg-lime-500 px-8 py-3 text-base font-medium text-white shadow-sm transition-colors hover:bg-lime-800 dark:hover:bg-lime-600 sm:w-auto"
                 >
                   방문 상담 신청 (간편 폼)
                 </Link>

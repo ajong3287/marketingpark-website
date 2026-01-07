@@ -109,7 +109,7 @@ export default function BlogPage() {
         <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap items-center gap-3">
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">카테고리:</span>
-            <button className="rounded-full bg-lime-600 dark:bg-lime-500 px-4 py-2 text-sm font-medium text-white hover:bg-lime-700 dark:hover:bg-lime-600 transition-colors">
+            <button className="rounded-full bg-lime-700 dark:bg-lime-500 px-4 py-2 text-sm font-medium text-white hover:bg-lime-800 dark:hover:bg-lime-600 transition-colors">
               전체 ({allPosts.length})
             </button>
             {categories.map((category) => {
@@ -179,7 +179,7 @@ export default function BlogPage() {
             />
             <button
               type="submit"
-              className="rounded-md bg-lime-600 px-6 py-3 text-base font-medium text-white hover:bg-lime-700 transition-colors"
+              className="rounded-md bg-lime-700 px-6 py-3 text-base font-medium text-white hover:bg-lime-800 transition-colors"
             >
               구독하기
             </button>

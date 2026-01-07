@@ -226,7 +226,7 @@ export default function AboutPage() {
           <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
             {coreStrengths.map((strength) => (
               <div key={strength.name} className="rounded-lg bg-white dark:bg-gray-800 p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-600 text-white">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-lime-700 text-white">
                   <strength.icon size={24} />
                 </div>
                 <h3 className="mt-5 text-xl font-semibold text-gray-900 dark:text-white">{strength.name}</h3>

@@ -50,7 +50,7 @@ const StepIndicator = ({ currentStep, totalSteps }: { currentStep: number; total
               <div
                 className={`flex h-10 w-10 items-center justify-center rounded-full border-2 ${
                   step < currentStep
-                    ? 'border-lime-600 bg-lime-600 text-white'
+                    ? 'border-lime-700 bg-lime-700 text-white'
                     : step === currentStep
                     ? 'border-lime-600 text-lime-600'
                     : 'border-gray-300 text-gray-300'
@@ -152,7 +152,7 @@ export const MultiStepContactForm = () => {
         <div className="mt-6">
           <button
             onClick={() => setSubmitStatus(null)}
-            className="rounded-md bg-lime-600 px-6 py-2 text-sm font-medium text-white hover:bg-lime-700"
+            className="rounded-md bg-lime-700 px-6 py-2 text-sm font-medium text-white hover:bg-lime-800"
           >
             새 상담 신청하기
           </button>
@@ -239,7 +239,7 @@ export const MultiStepContactForm = () => {
               <button
                 type="button"
                 onClick={handleNext}
-                className="flex items-center gap-2 rounded-md bg-lime-600 px-6 py-3 text-base font-medium text-white hover:bg-lime-700"
+                className="flex items-center gap-2 rounded-md bg-lime-700 px-6 py-3 text-base font-medium text-white hover:bg-lime-800"
               >
                 다음 단계
                 <ChevronRight size={20} />
@@ -345,7 +345,7 @@ export const MultiStepContactForm = () => {
               <button
                 type="button"
                 onClick={handleNext}
-                className="flex items-center gap-2 rounded-md bg-lime-600 px-6 py-3 text-base font-medium text-white hover:bg-lime-700"
+                className="flex items-center gap-2 rounded-md bg-lime-700 px-6 py-3 text-base font-medium text-white hover:bg-lime-800"
               >
                 다음 단계
                 <ChevronRight size={20} />
@@ -428,7 +428,7 @@ export const MultiStepContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="rounded-md bg-lime-600 px-8 py-3 text-base font-medium text-white hover:bg-lime-700 disabled:bg-gray-400"
+                className="rounded-md bg-lime-700 px-8 py-3 text-base font-medium text-white hover:bg-lime-800 disabled:bg-gray-400"
               >
                 {isSubmitting ? '전송 중...' : '상담 신청하기'}
               </button>
